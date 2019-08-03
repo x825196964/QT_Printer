@@ -46,7 +46,7 @@ void Printer_Ui::on_bt_save_img_clicked()
         int x = rect.width() / pixmap.width();
         int y = rect.height() / pixmap.height();
         //将图像(所有要画的东西)在pdf上按比例尺缩放,如果想展示原始图，就讲x和y设置为1就可以了
-        painterPixmap.scale(x, y);
+        painterPixmap.scale(x, y/3);
         //画图
         painterPixmap.drawPixmap(0, 0, pixmap);
         painterPixmap.end();
